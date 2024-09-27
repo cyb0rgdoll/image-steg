@@ -37,6 +37,23 @@ My preferred syntax, example:
 
 `binwalk -Me filename.png`
 
+$ binwalk -e flag.png
+	
+#Useful options
+-e, --extract                Automatically extract known file types
+-B, --signature              Scan target file(s) for common file signatures
+-E, --entropy                Calculate file entropy, use with -B (see the quickstart guide - https://goo.gl/JPKAIQ)
+-z, --carve                  Carve data from files, but don't execute extraction utilities
+-r, --rm                     Cleanup extracted / zero-size files after extraction
+-M, --matryoshka             Recursively scan extracted files
+-R, --raw="\x00\x01"		 Search for a custom string. The search string can include escaped octal and/or hex values.
+#Binary Diffing Options
+-W, --hexdump                Perform a hexdump / diff of a file or files
+-G, --green                  Only show lines containing bytes that are the same among all files
+-i, --red                    Only show lines containing bytes that are different among all files
+-U, --blue                   Only show lines containing bytes that are different among some files
+
+
 -Me is used to recursively extract any files.
 
 **5. pngcheck**
